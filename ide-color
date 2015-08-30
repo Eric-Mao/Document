@@ -1,0 +1,33 @@
+package com.eric.psw.test.daoTest;
+interface ColorTest{
+    void doNothing(String str);
+}
+/**
+ * Created by eric on 15-8-30.
+ */
+public class IdeColor implements ColorTest{
+    private String str = new String("String");
+    private final static int FINAL_CONSTANT = 54;
+    private static int CONSTANT = 60;
+    public IdeColor(){
+        IdeColor.CONSTANT = 45;
+    }
+    /*Block Comment*/
+    public void doNothing(String str) {
+        String ss = "What the hall"; //line comment
+        IdeColor obj = new IdeColor();
+        obj.setStr(ss);
+        System.out.println(IdeColor.FINAL_CONSTANT + " " + str);
+    }
+    public void saying(){}
+    public static void staticSaying(){}
+    public String getStr() {
+        return str;
+    }
+    public void setStr(String str) {
+        this.str = str;
+    }
+    public static int getCONSTANT() {
+        return CONSTANT;
+    }
+}
